@@ -3,6 +3,16 @@
 ## Projects Requirements
 - [Project Requirements](https://my.learn.co/courses/653/pages/phase-3-project-cli?module_item_id=95439)
 
+## TO DO LIST
+    [] Models
+        [] Artist
+        [] Songs
+    [] SQLAlchemy migrations
+        []
+        []
+    [] Building CLI
+        []
+        []
 Instructions
 Welcome to the end of Phase 3! You've learned about a lot in this unit:
 
@@ -78,20 +88,22 @@ h. This criterion is linked to a Learning OutcomeProject Turned in on Time (8/27
 - Object Oriented Python 
     - Class for Songs
     - Class for Artists
+
 - Database Tables 
     - Describe how you will use SQLAlchemy to create and interact with 2 or more related database tables
         - Table: Songs
-            - id
-            - title
-            - category
+            - Atrist id (INTEGER FOREIGN KEY) 
+            - title (STRING NOT NULL UNIQUE)
+            - category (STRING NOT NULL UNIQUE)
         - Table: Artists
-            - id
-            - name
-            - nationality
+            - id (INTEGER PRIMARY KEY)
+            - name (STRING NOT NULL UNIQUE)
+            - nationality (STRING NOT NULL UNIQUE)
         - Table: (One-to-Many) Artist => Songs == "List of favorite songs by an artist"
             - ID
             - song ID
             - Artist ID
+
 - Object Relationships 
      - Describe the types of relationships your different classes and tables will have with each other
      - Artist can have many songs
