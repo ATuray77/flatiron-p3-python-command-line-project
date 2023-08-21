@@ -22,12 +22,12 @@ In this project, we're going to use these skills to create a CLI. You won't be a
 ### The minimum requirements
 
 [ ]A CLI application 
-    - that solves a real-world problem
-    - adheres to best practices.
+- - that solves a real-world problem
+- - adheres to best practices.
 
 [ ] A database created with SQLAlchemy ORM
-    - modified with SQLAlchemy ORM 
-    - with 2+ related tables.
+- - modified with SQLAlchemy ORM 
+- - with 2+ related tables.
 
 [ ] A well-maintained virtual environment using Pipenv.
 
@@ -63,3 +63,56 @@ g. This criterion is linked to a Learning OutcomeDemo Video and README - 5 pts.
 README and Demo Video both present and following best practices. README contains all necessary items (project name, description, installation instructions, brief description of how to use your app, a Contributor's Guide, and a License). Demo video is 3 minutes or less in length and provides a nontechnical demo of app features.
 
 h. This criterion is linked to a Learning OutcomeProject Turned in on Time (8/27/2023) 5 pts 
+
+
+### PROJECT PROPOSALS
+- Main idea: <Enter the title and main idea of your app>
+
+### User story: 
+-   Pull up a list of songs 
+-   Pull up a list of artists
+-   See a list of favorites songs
+-   Remove a song from the list
+
+### How I will use the concepts I recently learned to meet the project requirements: 
+- Object Oriented Python 
+    - Class for Songs
+    - Class for Artists
+- Database Tables 
+    - Describe how you will use SQLAlchemy to create and interact with 2 or more related database tables
+        - Table: Songs
+            - id
+            - title
+            - category
+        - Table: Artists
+            - id
+            - name
+            - nationality
+        - Table: (One-to-Many) Artist => Songs == "List of favorite songs by an artist"
+            - ID
+            - song ID
+            - Artist ID
+- Object Relationships 
+     - Describe the types of relationships your different classes and tables will have with each other
+     - Artist can have many songs
+     - Many songs can be put in a favorite list
+- Aggregate and Association Methods 
+    - Describe a few of the methods you plan on including in your application to query your database
+        -   List all Songs
+            - Create
+                - Create a list of songs
+                - Create a list of Artists
+            - Read
+                - Display all Songs
+                - Display all Artists
+            - Update
+                - Change the title of a song
+            - Delete
+                - Remove a song from the list
+        -   List all Artists
+- Use of Data Structures 
+    - Describe how you plan on using data structures like lists and dictionaries in your project
+        - LIST: A list of songs as ID's
+        - DICTIONARY: Each song has a set of Attributes and values
+- What area I think will be most challenging
+    - Describe which aspect of the project you think will present the greatest challenge, or the topic that you feel least familiar with at present.
