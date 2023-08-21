@@ -5,7 +5,7 @@
 
 ## TO DO LIST
     []Set up environment
-        [] set up pipenv
+        [x] set up pipenv
         [] ipdb, 
         [] sqlalchemy, 
         [] alembic, 
