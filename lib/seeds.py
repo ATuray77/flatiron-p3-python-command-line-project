@@ -30,5 +30,15 @@ for i in range(5):
     session.add(artist)
     session.commit()
 
-    artists.append(artist)
+categories = ["praise", "worship"]
+
+artists.append(artist)
+
+songs = []
+for song in songs:
+    song = Song(
+        title = fake.unique.name(),
+        category = random.choice(categories)
+    )
+
 
