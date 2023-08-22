@@ -39,7 +39,7 @@ for song in songs:
         category = random.choice(categories)
     )
 
-songs.append(song)
+    songs.append(song)
 
 session.bulk_save_objects(songs, artist)
 session.commit()
