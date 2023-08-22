@@ -43,7 +43,7 @@ for song in songs:
 
 songs.append(song)
 
-session.bulk_save_objects(reviews)
+session.bulk_save_objects(songs)
 session.commit()
 session.close()
 
