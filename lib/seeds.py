@@ -41,4 +41,5 @@ for song in songs:
         category = random.choice(categories)
     )
 
+songs.append(song)
 
