@@ -1,9 +1,7 @@
-from sqlalchemy import Column, String, Integer, create_engine, ForeignKey
-from sqlalchemy.orm import declarative_base, sessionmaker, relationship
+from sqlalchemy import Column, String, Integer, ForeignKey
+from sqlalchemy.orm import declarative_base, relationship
 
-engine = create_engine("sqlite:///songLibrary.db")
-Session = sessionmaker(bind=engine)
-session = Session()
+
 
 Base = declarative_base()
 
