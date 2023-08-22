@@ -9,7 +9,7 @@ Base = declarative_base()
 
 class Artist(Base):
     __tablename__ = "artists"
-    id = Column(Integer, Primary_key = True)
+    id = Column(Integer, primary_key = True)
     name = Column(String)
     nationality = Column(String)
     songs = relationship("song", backref="artist")
@@ -25,7 +25,7 @@ class Artist(Base):
 
 class Song(Base):
     __tablename__ = "songs"
-    id = Column(Integer, Primary_key = True)
+    id = Column(Integer, primary_key = True)
     title = Column(String)
     category = Column(String)
     artist_id = Column(Integer, ForeignKey("artists.id"))
