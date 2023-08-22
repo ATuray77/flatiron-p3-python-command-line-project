@@ -30,4 +30,5 @@ for i in range(5):
     session.add(artist)
     session.commit()
 
+    artists.append(artist)
 
