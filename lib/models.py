@@ -12,7 +12,8 @@ class Artist(Base):
     id = Column(Integer, primary_key = True)
     name = Column(String)
     nationality = Column(String)
-    songs = relationship("song", backref="artist")
+
+    songs = relationship("song", backref="artist") # relationship
 
 
     def __repr__(self):
@@ -29,7 +30,8 @@ class Song(Base):
     title = Column(String)
     category = Column(String)
     artist_id = Column(Integer, ForeignKey("artists.id"))
-    artists = relationship("artist", backref="song")
+
+    artists = relationship("artist", backref="song") # Relationship
 
 
     def __repr__(self):
