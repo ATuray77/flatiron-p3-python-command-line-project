@@ -7,7 +7,10 @@ from faker import Faker
 
 fake = Faker()
 
-names = ["Sinach", "Bassey", "Eben", "Steve", ]
+names = ["Sinach", "Bassey", "Eben", "Steve", "Grace"]
+nationalities = ["Nigerian", "Ghanian", "South African", "American", "Kenyan"]
+
+artists = []
 
 
 if __name__ == '__main__':
