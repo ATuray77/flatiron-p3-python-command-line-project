@@ -25,7 +25,7 @@ class Artist(Base):
 
 class Song(Base):
     __tablename__ = "songs"
-    id = Column(Integer, Prinary_key = True)
+    id = Column(Integer, Primary_key = True)
     title = Column(String)
     category = Column(String)
     artist_id = Column(Integer, ForeignKey("artists.id"))
