@@ -12,8 +12,8 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)  # enables communication with the db
     session = Session()
 
-    session.query(Artist).delete() # Reset DB
-    session.query(Song).delete() # Reset DB
+    # session.query(Artist).delete() # Reset DB
+    # session.query(Song).delete() # Reset DB
 
 fake = Faker()
 
@@ -26,13 +26,11 @@ for i in range(5):
        name = random.choice(names),
        nationality = random.choice(nationalities)
     )
-    
-    session.add(artist)
-    session.commit()
+    artists.append(artist)
+    # session.add(artist)
+    # session.commit()
 
 categories = ["praise", "worship"]
-
-artists.append(artist)
 
 songs = []
 for song in songs:
@@ -43,7 +41,7 @@ for song in songs:
 
 songs.append(song)
 
-session.bulk_save_objects(songs)
+session.bulk_save_objects(songs, artist)
 session.commit()
 session.close()
 
