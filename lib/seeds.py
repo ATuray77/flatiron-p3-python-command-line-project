@@ -4,6 +4,7 @@ from models import Artist, Song
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from faker import Faker
+import random
 
 fake = Faker()
 
@@ -11,6 +12,11 @@ names = ["Sinach", "Bassey", "Eben", "Steve", "Grace"]
 nationalities = ["Nigerian", "Ghanian", "South African", "American", "Kenyan"]
 
 artists = []
+for i in range(5):
+    artist = Artist(
+       name = random.choice(names),
+       nationality = random.choice(nationalities)
+    )
 
 
 if __name__ == '__main__':
