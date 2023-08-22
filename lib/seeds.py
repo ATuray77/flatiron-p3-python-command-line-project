@@ -6,6 +6,15 @@ from sqlalchemy.orm import sessionmaker
 from faker import Faker
 import random
 
+
+if __name__ == '__main__':
+    engine = create_engine('sqlite:///data.db')
+    Session = sessionmaker(bind=engine)  # enables communication with the db
+    session = Session()
+
+    session.query(Artist).delete() # Reset DB
+    session.query(Song).delete() # Reset DB
+
 fake = Faker()
 
 names = ["Sinach", "Bassey", "Eben", "Steve", "Grace"]
@@ -17,12 +26,8 @@ for i in range(5):
        name = random.choice(names),
        nationality = random.choice(nationalities)
     )
+    
+    session.add(artist)
+    session.commit()
 
 
-if __name__ == '__main__':
-    engine = create_engine('sqlite:///data.db')
-    Session = sessionmaker(bind=engine)  # enables communication with the db
-    session = Session()
-
-    session.query(Artist).delete() # Reset DB
-    session.query(Song).delete() # Reset DB
