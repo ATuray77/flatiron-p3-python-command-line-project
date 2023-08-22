@@ -7,7 +7,7 @@
     []Set up environment
         [x] set up pipenv
         [] ipdb, 
-        [] sqlalchemy, 
+        [x] sqlalchemy, 
         [] alembic, 
         [] faker
     [] Models
