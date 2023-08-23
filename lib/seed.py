@@ -11,8 +11,9 @@ engine = create_engine('sqlite:///songLibrary.db')
 Session = sessionmaker(bind=engine)  # enables communication with the db
 session = Session()
 
-    #session.query(Artist).delete() # Reset DB
-    #session.query(Song).delete() # Reset DB
+session.query(Artist).delete() # Reset DB
+session.query(Song).delete() # Reset DB
+session.commit()
 
 fake = Faker()
 
@@ -26,21 +27,22 @@ for i in range(5):
         nationality = random.choice(nationalities)
         )
     artists.append(artist)
-        # session.add(artist)
-        # session.commit()
+    session.add(artist)
+    session.commit()
 
+titles = ["Way Maker", "Kadosh", "You are Powerful", "Goodness", "Happily!"]
 categories = ["praise", "worship"]
 
-songs = []
-for song in songs:
+music = []
+for n in range(5):
     song = Song(
-        title = fake.unique.name(),
+        title = random.choice(titles),
         category = random.choice(categories)
         )
 
-    songs.append(song)
-
-session.bulk_save_objects(songs, artist)
-session.commit()
-session.close()
+#session.bulk_save_objects(songs, artist)
+    music.append(song)
+    session.add(song)
+    session.commit()
+    session.close()
 
