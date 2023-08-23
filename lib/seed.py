@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 from models import Artist, Song
 
 from sqlalchemy import create_engine
