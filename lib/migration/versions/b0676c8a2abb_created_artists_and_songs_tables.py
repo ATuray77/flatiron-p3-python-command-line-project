@@ -1,8 +1,8 @@
-"""created artists and songs tables
+"""Created artists and songs tables
 
-Revision ID: 43fc54097d61
+Revision ID: b0676c8a2abb
 Revises: 
-Create Date: 2023-08-23 15:35:43.712383
+Create Date: 2023-08-23 17:53:51.715942
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '43fc54097d61'
+revision: str = 'b0676c8a2abb'
 down_revision: Union[str, None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None

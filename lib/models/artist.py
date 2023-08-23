@@ -14,9 +14,9 @@ class Artist(Base):
     songs = relationship("Song", backref="artist") # relationship
 
 
-    def __repr__(self):
-        return f"\n<Artist" \
-            + f"id={self.id}, " \
-            + f"name={self.name}, " \
-            + f"nationality={self.nationality}, " \
-            + ">"
+    # def __repr__(self):
+    #     return f"\n<Artist" \
+    #         + f"id={self.id}, " \
+    #         + f"name={self.name}, " \
+    #         + f"nationality={self.nationality}, " \
+    #         + ">"

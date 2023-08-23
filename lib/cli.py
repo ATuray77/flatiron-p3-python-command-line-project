@@ -1,7 +1,7 @@
 from prettycli import red
 from simple_term_menu import TerminalMenu
-from models import Owner
+from models import Artist
 
-class Cli():
-    def __init__(self):
-        pass
+if __name__ == "__main__":
+    user_input =  input("say yes or no")
+    print(user_input)
