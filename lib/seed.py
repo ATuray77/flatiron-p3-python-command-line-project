@@ -29,15 +29,13 @@ for i in range(5):
     artists.append(artist)
 session.add_all(artists)
 session.commit()
-print(artists)
-print(artists[1].id)
+
 
 titles = ["Way Maker", "Kadosh", "You are Powerful", "Goodness", "Happily!"]
 categories = ["praise", "worship"]
 
 music = []
 for n in range(5):
-    print(artists[n].id)
     song = Song(
         artist_id = artists[n].id,
         title = random.choice(titles),
